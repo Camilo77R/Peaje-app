@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+    <title>Peaje</title>
+</head>
+<body>
+    <section class="shadow-md m-8 rounded-md flex flex-col items-center content-center ">
+        <div>
+            <h2 class="text-2xl  font-semibold">Peaje  Popayán a El Tambo </h2>
+        </div>
+        <div>
+            <img src="./imgs/peaje.jpg" alt="img del peaje" class="rounded-md" >
+        </div>
+        
+        <div class="flex gap-9 max-w-md m-auto py-3">
+            <img src="./imgs/automovil.png" alt="imagen del automovil" class="w-26 h-16 " id="img-automovil">
+            <img src="./imgs/bus.png" alt="imagen del bus" class="w-26 h-16"  id="img-bus">
+            <img src="./imgs/camion.png" alt="imgen del camion" class="w-26 h-16  "  id="img-camion">
+        </div>
+
+
+        <form class="" >
+            <div>
+                <h3 class="text-center bg-green-500 w-[402px] rounded-md font-semibold text-white">Peaje datos</h3>
+            </div>
+            
+            <div class="flex justify-between">
+                <label for="txt-automovil">N Automoviles:</label>
+                <input type="text" id="txt-automovil" disabled class=" py-1 rounded-sm  border-2 border-gray-300   focus:outline-zinc-500">
+            </div>
+            <div class="flex justify-between">
+                <label for="txt-bus">N Buses:</label>
+                <input type="text" id="txt-bus" disabled class=" py-1 rounded-sm  border-2 border-gray-300   focus:outline-zinc-500">
+            </div>
+            <div class="flex justify-between">
+                <label for="txt-camion" >N Camiones:</label>
+                <input type="text" id="txt-camion" disabled class=" py-1 rounded-sm  border-2 border-gray-300   focus:outline-zinc-500">
+            </div>
+            <div class="flex justify-between">
+                <label for="txt-total" >Total recaudado:</label>
+                <input type="text" id="txt-total" disabled class=" py-1 rounded-sm  border-2 border-gray-300   focus:outline-zinc-500">
+            </div>
+            
+            <div class="flex  gap-5 py-7 justify-between ">
+                <button id="btn-abrir" class="bg-green-500 p-2 rounded-md text-white hover:bg-white  hover:text-green-400">Abrir Peaje</button>
+                <button id="btn-cerrar" class="bg-red-600 p-2 rounded-md text-white hover:bg-white  hover:text-red-600">Cerrar Peaje</button>
+            </div>
+        </form>
+    </section>
+    <script type="module" src="./js/main.js"></script>
+</body>
+</html>
