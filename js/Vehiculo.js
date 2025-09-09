@@ -22,6 +22,12 @@ class Vehiculo{
         let totalMonto = this.automovil * 5000 + this.bus * 10000 + this.camion *15000;
         return totalMonto;
     }
+
+    resetearValores(){
+        this.automovil = 0;
+        this.bus = 0;
+        this.camion = 0;
+    }
 }
 
 export default Vehiculo;

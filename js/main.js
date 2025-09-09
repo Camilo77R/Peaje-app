@@ -52,7 +52,7 @@ function aumentarCuentacamion(e){
 
 
 function abrirElpeaje(estaAbrierto){
-
+    
     if(estaAbrierto){
         $imgAutomovil.addEventListener("click", aumentarCuentaVehiculo);
         $imgBus.addEventListener("click", aumentarCuentaBus);
@@ -61,6 +61,7 @@ function abrirElpeaje(estaAbrierto){
     }else{
         console.log("El peaje no esta abierto!!");    
     }
+    
 
 }
 
@@ -75,13 +76,22 @@ function cerrarPeaje(e){
         $imgAutomovil.removeEventListener("click", aumentarCuentaVehiculo);
         $imgBus.removeEventListener("click", aumentarCuentaBus);
         $imgCamion.removeEventListener("click", aumentarCuentacamion);
+        borrarValores();
     }
 }
 
 
 $btnACerrar.addEventListener("click",cerrarPeaje);
 
-
+ function borrarValores(){
+     
+   miVehiculo.resetearValores();
+   $txtAutomovil.value = miVehiculo.automovil;
+    $txtBus.value = miVehiculo.bus;
+    $txtCamion.value = miVehiculo.camion;
+    $txtTotal.value = miVehiculo.totalRecaudado();
+    
+ }
 
 
 
